@@ -24,7 +24,11 @@ header {
 	color: #ED1111;
 	font-size: 40px;
 	font-weight: 800;
-	
+}
+
+header a {
+  color: #ED1111;
+
 }
 
 h1 {
