@@ -16,7 +16,13 @@ class RatingsController < ApplicationController
   end
 
   def new
-    @photo = Photo.all.sample
+
+    unless current_user.nil?
+      @photo = Rating.unrated(current_user.id)
+    else
+      @photo = Photo.all.sample
+    end
+
     @rating = Rating.new
   end
 
