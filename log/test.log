@@ -134,3 +134,4 @@ SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
 SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
   [1m[35m (0.5ms)[0m  rollback transaction
+Connecting to database specified by database.yml

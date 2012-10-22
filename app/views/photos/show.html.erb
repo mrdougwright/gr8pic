@@ -1,5 +1,7 @@
-<h1>Photos#show</h1>
-<p>Find me in app/views/photos/show.html.erb</p>
+<h1>All Photos</h1>
 
-<%= image_tag @photo.image.url %>
-<%= image_tag @photo.image.url(:thumb) %>
+<% for photo in @photos %>
+<li><div>
+<%= image_tag photo.image.url(:large) %>
+</div></li>
+<% end %>

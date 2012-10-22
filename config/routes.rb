@@ -3,6 +3,7 @@ Gr8picRails::Application.routes.draw do
   get "log_in" => "sessions#new"
   get "log_out" => "sessions#destroy"
   get "sign_up" => "users#new"
+  get "photos_show" => "photos#show"
 
   resources :users
   resources :sessions

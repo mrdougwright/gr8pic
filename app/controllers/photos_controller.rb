@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.last
+    @photos = Photo.all
   end
   
 end
