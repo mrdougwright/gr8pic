@@ -9,17 +9,13 @@ class Rating < ActiveRecord::Base
 
 
   def recalculate_photo
-    # photo.update_rating_total if photo
     photo.update_photo_ratings if photo
   end
-  
+
+
   def self.winner  #PROBLEM --> what about ties?
     best_photo = Photo.maximum("ratings_ave")
     Photo.where(:ratings_ave => best_photo).first
   end
-
-  def edit
-    @rating = Rating.find(params[:id])
-  end #WHAT IS THIS DOING?
 	
 end

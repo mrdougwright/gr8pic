@@ -6,10 +6,6 @@ class Photo < ActiveRecord::Base
     :small => "150x150>"
   }
 
-  def self.random
-    Photo.all.sample
-  end
-
   def update_photo_ratings
     #This query may need work later. At large scale, the last photo id may
     #not be the same one user rated. Change to find Rating.value based on user_id on rating.
