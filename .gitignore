@@ -1,2 +1,2 @@
 database.yml
-development.log
+log/development.log
