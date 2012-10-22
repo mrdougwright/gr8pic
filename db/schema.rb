@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(:version => 20121021225654) do
 
   create_table "photos", :force => true do |t|
     t.integer  "user_id"
-    t.float    "ratings_total",                                     :default => 0.0
-    t.float    "ratings_count",                                     :default => 0.0
-    t.decimal  "ratings_ave",        :precision => 10, :scale => 9
-    t.datetime "created_at",                                                         :null => false
-    t.datetime "updated_at",                                                         :null => false
+    t.float    "ratings_total",     :default => 0.0
+    t.float    "ratings_count",     :default => 0.0
+    t.decimal  "ratings_ave",       :precision => 10, :scale => 9
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
