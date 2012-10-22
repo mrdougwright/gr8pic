@@ -1,0 +1,9 @@
+<div class="main_container">
+
+<h1>Ratings</h1>
+		<p>Yesterday's highest rated photo by total rating is:</p>
+			<li>Photo ID: <%= @winning_photo.id %></li>
+			<li>User ID: <%= @winning_photo.user_id %></li>
+			<li>User Name: <%= @winning_user %></li><br>
+			<li><%= image_tag @winning_photo.image.url, {:height => 500} %></li>
+</div>

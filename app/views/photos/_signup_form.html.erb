@@ -1,0 +1,37 @@
+<div class="main_container">
+<li>
+	<h1>Sign Up</h1>
+	<span class="small_font">so we know which photo is yours!</span>
+<%= form_for @user do |x| %>
+	<% if @user.errors.any? %>
+		<div class="error_messages">
+			<h2>Form is invalid</h2>
+			<ul>
+				<% for message in @user.errors.full_messages %>
+					<li><%= message %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+
+	<p>
+		<%= x.label :name %><br />
+		<%= x.text_field(:name, :placeholder => "name") %>
+	</p>
+	<p>
+		<%= x.label :email %><br />
+		<%= x.text_field(:email, :placeholder => "email") %>
+	</p>
+	<p>
+		<%= x.label :password %><br />
+		<%= x.password_field(:password, :placeholder => "password") %>
+	</p>
+	<p>
+		<%= x.label :password_confirmation %><br />
+		<%= x.password_field :password_confirmation %>
+	</p>
+
+	<%= x.submit "Create Account" %>
+<% end %>
+	</li>
+</div>

@@ -1,0 +1,40 @@
+<% if current_user %>	
+	<p>need a 404</p>
+<% else %>
+	<h1>Sign Up</h1>
+	<span>New users, please sign up below...</span><br>
+	<span class="small_font">so we know which photo is yours!</span>
+
+
+	<%= form_for @user do |x| %>
+		<% if @user.errors.any? %>
+			<div class="error_messages">
+				<h2>Form is invalid</h2>
+				<ul>
+					<% for message in @user.errors.full_messages %>
+						<li><%= message %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+
+		<p>
+			<%= x.label :name %><br />
+			<%= x.text_field(:name) %>
+		</p>
+		<p>
+			<%= x.label :email %><br />
+			<%= x.text_field(:email) %>
+		</p>
+		<p>
+			<%= x.label :password %><br />
+			<%= x.password_field(:password) %>
+		</p>
+		<p>
+			<%= x.label :confirm_password %><br />
+			<%= x.password_field :password_confirmation %>
+		</p>
+
+		<%= x.submit "Create Account" %>
+	<% end %>
+<% end %>

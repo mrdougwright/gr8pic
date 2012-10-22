@@ -1,0 +1,3 @@
+Gr8pic ReadMe File
+
+Upload a photo. Browse and Rate others. Highest rated photo is displayed daily on homepage.

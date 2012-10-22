@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gr8picRails</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="user_nav">
+	<% if current_user %>
+		<li>Logged in as <%= current_user.name %></li><br />
+		<li><%= link_to "Log out", log_out_path %></li>
+	<% else %>
+		<div class="button"><%= link_to "Sign up", sign_up_path %></div> 
+		<div class="button"><%= link_to "log in", log_in_path %></div>
+	<% end %>
+</div>
+	
+	<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, :id => "flash_#{name}" %>
+	<% end %>
+
+<%= yield %>
+
+	<% if current_page?(root_url) %>
+		<footer>
+			<div class="button"> <a href="welcome/about">ABOUT</a><div>
+		</footer>
+	<% else %>
+		<footer>
+			<div class="button"> <%= link_to "Home", root_path %></div>
+		</footer>
+	<% end %>
+
+</body>
+</html>

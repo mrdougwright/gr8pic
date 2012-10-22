@@ -1,0 +1,136 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-19 02:52:16', '2012-10-19 02:52:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-19 02:52:16', '2012-10-19 02:52:16', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "photos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2012-10-19 02:52:16', '2012-10-19 02:52:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "photos" ("created_at", "updated_at", "id") VALUES ('2012-10-19 02:52:16', '2012-10-19 02:52:16', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "ratings"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ratings" ("created_at", "updated_at", "id") VALUES ('2012-10-19 02:52:16', '2012-10-19 02:52:16', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ratings" ("created_at", "updated_at", "id") VALUES ('2012-10-19 02:52:16', '2012-10-19 02:52:16', 298486374)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2012-10-19 02:52:16', '2012-10-19 02:52:16', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2012-10-19 02:52:16', '2012-10-19 02:52:16', 298486374)[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by PhotosController#index as HTML
+  [1m[35mPhoto Load (1.1ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+Completed 200 OK in 47ms (Views: 19.2ms | ActiveRecord: 1.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by PhotosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+Completed 200 OK in 57ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by RatingsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT MAX("photos"."ratings_total") AS max_id FROM "photos" 
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."ratings_total" = 0 LIMIT 1[0m
+Completed 500 Internal Server Error in 19ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by RatingsController#new as HTML
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" ORDER BY RANDOM() LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsersController#index as HTML
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by UsersController#new as HTML
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by WelcomeController#about as HTML
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (1.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "histories"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)[0m
+SQLite3::SQLException: table histories has no column named snapshot: INSERT INTO "histories" ("snapshot", "created_at", "updated_at", "id") VALUES ('MyString', '2012-10-20 07:14:05', '2012-10-20 07:14:05', 980190962)
+  [1m[35m (0.5ms)[0m  rollback transaction
