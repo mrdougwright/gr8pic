@@ -9,12 +9,13 @@
 main picture, and upload button -->
 			
 		<li><div class="button"> <%= link_to "RATE", new_rating_path %> </div></li>
-		<li><div> 
-			<% if @winning_photo.nil? %>
+		<li><div>
+			<%= image_tag("http://gr8pic.com/pictures/cat_picture.jpeg")  %>
+			 <!--PLACEHOLDER if @winning_photo.nil?
 				<p>No photo yet</p>
-			<% else %>
-				<%= image_tag @winning_photo.image.url %>
-			<% end %>
+			 else 
+				 image_tag @winning_photo.image.url 
+			 end  -->
 		</div></li>
 		<li><div class="button"><%= link_to "UPLOAD", new_photo_path %></div></li>
 		
