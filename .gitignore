@@ -2,3 +2,4 @@ database.yml
 log/
 public/system/
 tmp/
+newrelic.yaml
