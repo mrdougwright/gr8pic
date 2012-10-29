@@ -32,6 +32,7 @@ gem 'dynamic_form' #gem for Error Validations in view: http://tw.gs/17s4d
 gem 'thin'  #create thinner server messaging
 #gem 'letmein' #trying to get user sessions working
 
+gem 'newrelic_rpm' #added new relic for info and tshirt
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
