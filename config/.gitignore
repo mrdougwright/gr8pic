@@ -1,2 +1,3 @@
 database.yml
 dropbox.yml
+config/newrelic.yml
