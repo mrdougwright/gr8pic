@@ -5,5 +5,5 @@
 			<li>Photo ID: <%= @winning_photo.id %></li>
 			<li>User ID: <%= @winning_photo.user_id %></li>
 			<li>User Name: <%= @winning_user %></li><br>
-			<li><%= image_tag @winning_photo.image.url, {:height => 500} %></li>
+			<li><%= filepicker_image_tag @winning_photo.image.url, {:height => 500} %></li>
 </div>

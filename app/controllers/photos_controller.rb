@@ -11,7 +11,7 @@ class PhotosController < ApplicationController
     if @photo.save
       redirect_to new_rating_path
     else
-      render :edit
+      redirect_to new_photo_path
     end
   end
 
