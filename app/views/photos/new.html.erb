@@ -2,12 +2,12 @@
 	<h1>Upload a Photo</h1>
 
 	<%= form_for(@photo, :html => { :multipart => true }) do |f| %>
-		<%= f.filepicker_field :image %> <!--changed from file_fiel-->
+		<%= f.file_field :image %>
 		<%= f.submit "Upload" %>
 	<% end %>
 	
 	<br />
-	<p>Want more space on gr8pic? Get a <a href="http://db.tt/6Rmkgg79">dropbox</a> account.</p>
+	<p>Want more space on gr8pic? Get a <a href="http://db.tt/6Rmkgg79" target="_blank">dropbox</a> account.</p>
 <% else %>
 	<%= render "signup_form" %>
 <% end %>

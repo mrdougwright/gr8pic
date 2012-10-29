@@ -28,7 +28,7 @@
 						<%= f.submit "Rate!", :class => "button" %>
 					<% end %><br />
 				<% end %>
-				<%= filepicker_image_tag @photo.image.url %>
+				<%= file_image_tag @photo.image.url %>
 			<% else %>
 				<%= render "done_rating" %>
 

@@ -3,8 +3,8 @@ class Photo < ActiveRecord::Base
   has_many :ratings
   has_attached_file :image, 
     :storage => :dropbox,
-    :dropbox_credentials => "#{Rails.root}/config/dropbox.yml"
-    :styles => {
+    :dropbox_credentials => "#{Rails.root}/config/dropbox.yml",
+    :styles => { 
     :thumb => "100x100#",
     :small => "150x150>",
     :medium => "300x300>",

@@ -5,7 +5,7 @@
 	<h1><div class="button"> <%= link_to "Home", root_path %></div></h1>
 	<% for photo in @photos %>
 	<li><div>
-	<%= filepicker_image_tag photo.image.url(:large) %> <!--added filepicker-->
+	<%= file_image_tag photo.image.url(:large) %>
 	</div></li>
 	<% end %>
 <% end %>
