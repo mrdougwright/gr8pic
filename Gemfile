@@ -27,7 +27,7 @@ gem 'jquery-rails'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
 gem 'paperclip', "~> 3.0" #gem for file attachment for photos
-gem 'paperclip-dropbox'  #gem install from Aaron
+#gem 'paperclip-dropbox'  #gem install from Aaron
 gem 'dynamic_form' #gem for Error Validations in view: http://tw.gs/17s4d
 gem 'thin'  #create thinner server messaging
 #gem 'letmein' #trying to get user sessions working
