@@ -7,7 +7,6 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -28,11 +27,15 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 
 gem 'paperclip', "~> 3.0" #gem for file attachment for photos
 #gem 'paperclip-dropbox'  #gem install from Aaron
+
 gem 'dynamic_form' #gem for Error Validations in view: http://tw.gs/17s4d
 gem 'thin'  #create thinner server messaging
 #gem 'letmein' #trying to get user sessions working
 
 gem 'newrelic_rpm' #added new relic for info and tshirt
+
+gem 'aws-sdk' #Amazon S3 gem
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 

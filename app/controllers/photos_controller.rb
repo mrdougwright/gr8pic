@@ -1,8 +1,9 @@
 class PhotosController < ApplicationController
 
   def index
-    @photo = Photo.random
-    @rating = Rating.new 
+    @photos = Photo.all
+    #@photo = Photo.random
+    #@rating = Rating.new 
   end
 
   def create
@@ -34,7 +35,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photos = Photo.all
+    @photo = Photo.find(params[:photo])
   end
   
 end
