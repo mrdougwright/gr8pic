@@ -13,7 +13,7 @@ main picture, and upload button -->
 			<% if @winning_photo.nil? %>
 				<p>No photo yet</p>
 			<% else %> 
-				 <%= link_to image_tag(@winning_photo.image.url(:large)), new_rating_path %>
+				 <%= link_to image_tag(@winning_photo.image.url), new_rating_path %>
 			<% end %>
 			 <!--PLACEHOLDER image_tag("http://gr8pic.com/pictures/cat_picture.jpeg")-->
 		</div></li>
