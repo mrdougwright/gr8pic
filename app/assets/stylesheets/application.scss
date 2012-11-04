@@ -98,7 +98,6 @@ h1 {
 }
 
 .main_container {
-  /*width: 80%;*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -132,9 +131,6 @@ h1 {
   font-size: 0.75em;
 }
 
-/*#wrapper {
-  margin-top: 2%;
-}*/
 a {
   text-decoration: none;
   color: #5F7A65;
@@ -167,14 +163,14 @@ footer {
 
 @media screen and (min-width: 1151px) and (max-width: 1500px) {
   .main_container img {
-    width: 500px;
+    width: 700px;
     height: auto;
   }
 }
 
 @media screen and (min-width: 801px) and (max-width: 1150px) {
   .main_container img {
-    width: 500px;
+    width: 600px;
     height: auto;
   }
 

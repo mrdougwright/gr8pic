@@ -2,17 +2,19 @@ class PhotosController < ApplicationController
 
   def index
     @photos = Photo.all
-    #@photo = Photo.random
-    #@rating = Rating.new 
   end
 
   def create
-    @photo = Photo.create(params[:photo].merge({:user_id => current_user.id}))
+    unless params[:photo].nil?
+      @photo = Photo.create(params[:photo].merge({:user_id => current_user.id}))
 
-    if @photo.save
-      redirect_to new_rating_path
+      if @photo.save
+        redirect_to new_rating_path
+      else
+        redirect_to new_photo_path
+      end
     else
-      redirect_to new_photo_path
+      redirect_to new_photo_path, :notice => "You must choose a photo to upload"
     end
   end
 
@@ -35,7 +37,7 @@ class PhotosController < ApplicationController
   end
 
   def show
-    @photo = Photo.find(params[:photo])
+    @photo = Photo.find(params[:id])
   end
   
 end

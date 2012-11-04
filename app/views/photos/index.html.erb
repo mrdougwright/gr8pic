@@ -1,12 +1,12 @@
-<h1>All Photos in Index</h1>
+<h1>All Photos</h1>
 <% if current_user.nil? %>
 	<p>You must <%= link_to "sign up", sign_up_path %> or <%= link_to "login", log_in_path %> to see all photos!</p>
 <% else %>
 	<h1><div class="button"> <%= link_to "Home", root_path %></div></h1>
 	<% for photo in @photos %>
-	<li><div>
-	<%= image_tag photo.image.url(:large) %>
-	</div></li>
+		<li><div>
+		<%= link_to(image_tag(photo.image.url(:medium)), photo) %>
+		</div></li>
 	<% end %>
 <% end %>
 <!-- This needs work. Trying to get individual photos to show large view from link from history (photos#index) -->

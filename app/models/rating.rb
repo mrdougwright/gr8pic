@@ -1,12 +1,10 @@
 class Rating < ActiveRecord::Base
   attr_accessible :value, :photo_id, :user_id
-
   belongs_to :photo
   belongs_to :user
 
   private
   after_save :recalculate_photo
-
 
   def recalculate_photo
     photo.update_photo_ratings if photo

@@ -3,7 +3,7 @@
 
 	<header><%= link_to "Gr8pic", root_path %></header><br />
 	
-	<h1>Upload your photo. Browse & rate the rest. See today's best one!</h1>
+	<h1>Upload your photo. Browse & rate the rest. (best below)</h1>
 
 	<div class="main_container"> <!--main container for rate button
 main picture, and upload button -->
@@ -13,7 +13,7 @@ main picture, and upload button -->
 			<% if @winning_photo.nil? %>
 				<p>No photo yet</p>
 			<% else %> 
-				 <%= image_tag @winning_photo.image.url %>
+				 <%= link_to image_tag(@winning_photo.image.url(:large)), new_rating_path %>
 			<% end %>
 			 <!--PLACEHOLDER image_tag("http://gr8pic.com/pictures/cat_picture.jpeg")-->
 		</div></li>

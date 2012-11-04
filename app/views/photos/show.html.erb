@@ -1,9 +1,12 @@
 <% if current_user.nil? %>
 	<%= render "signup_form" %>
-	
 	<br />
 	
 <% else %>
-	<%= image_tag @photo %>
+	<div class="button"><%= link_to "All Photos", photos_path %></div>
+	<div class="main_container">
+		<li><%= link_to image_tag(@photo.image.url(:large)), photos_path %></li>
+	<br />
+	</div>
 <% end %>
 <!-- This needs work. Trying to get individual photos to show large view from link from history (photos#index) -->
