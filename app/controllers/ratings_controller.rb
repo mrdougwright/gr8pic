@@ -16,7 +16,6 @@ class RatingsController < ApplicationController
   end
 
   def new
-
     unless current_user.nil?
       @photo = Rating.unrated(current_user.id)
     else

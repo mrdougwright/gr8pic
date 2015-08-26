@@ -4,3 +4,4 @@ public/system/
 tmp/
 newrelic.yaml
 .sass-cache/
+.DS_Store
